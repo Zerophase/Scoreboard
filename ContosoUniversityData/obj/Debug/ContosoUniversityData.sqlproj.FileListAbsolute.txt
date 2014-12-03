@@ -1,0 +1,14 @@
+C:\Users\Zerophase\Documents\Visual Studio 2013\Projects\ContosoUniversityData\ContosoUniversityData\bin\Debug\ContosoUniversityData.dacpac
+C:\Users\Zerophase\Documents\Visual Studio 2013\Projects\ContosoUniversityData\ContosoUniversityData\bin\Debug\ContosoUniversityData.dll
+C:\Users\Zerophase\Documents\Visual Studio 2013\Projects\ContosoUniversityData\ContosoUniversityData\bin\Debug\ContosoUniversityData.pdb
+C:\Users\Zerophase\Documents\Visual Studio 2013\Projects\ContosoUniversityData\ContosoUniversityData\obj\Debug\Model.xml
+C:\Users\Zerophase\Documents\Visual Studio 2013\Projects\ContosoUniversityData\ContosoUniversityData\obj\Debug\refactor.xml
+C:\Users\Zerophase\Documents\Visual Studio 2013\Projects\ContosoUniversityData\ContosoUniversityData\obj\Debug\postdeploy.sql
+C:\Users\Zerophase\Documents\Visual Studio 2013\Projects\ContosoUniversityData\ContosoUniversityData\obj\Debug\predeploy.sql
+C:\Users\Zerophase\Documents\Visual Studio 2013\Projects\ContosoUniversityData\ContosoUniversityData\obj\Debug\ContosoUniversityData.dll
+C:\Users\Zerophase\Documents\Visual Studio 2013\Projects\ContosoUniversityData\ContosoUniversityData\obj\Debug\ContosoUniversityData.pdb
+C:\Users\Zerophase\Desktop\ScoreBoard\ContosoUniversityData\bin\Debug\ContosoUniversityData.dacpac
+C:\Users\Zerophase\Desktop\ScoreBoard\ContosoUniversityData\bin\Debug\ContosoUniversityData.dll
+C:\Users\Zerophase\Desktop\ScoreBoard\ContosoUniversityData\bin\Debug\ContosoUniversityData.pdb
+C:\Users\Zerophase\Desktop\ScoreBoard\ContosoUniversityData\obj\Debug\ContosoUniversityData.dll
+C:\Users\Zerophase\Desktop\ScoreBoard\ContosoUniversityData\obj\Debug\ContosoUniversityData.pdb

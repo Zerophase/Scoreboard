@@ -1,0 +1,28 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Player] (Table)
+       [dbo].[ScoreLookUp] (Table)
+       [dbo].[Score] (Table)
+       [dbo].[ScoreCategory] (Table)
+       [dbo].[Friends] (Table)
+       [dbo].[ScoreGroup] (Table)
+       [dbo].[ScoreGroupName] (Table)
+       [dbo].[FK_ScoreLookUp_PlayerID] (Foreign Key)
+       [dbo].[FK_ScoreLookUp_ScoreID] (Foreign Key)
+       [dbo].[FK_ScoreCategory_ToScore] (Foreign Key)
+       [dbo].[FK_Friends_PlayerID] (Foreign Key)
+       [dbo].[FK_Friends_FriendID] (Foreign Key)
+       [dbo].[FK_ScoreGroup_ToPlayer] (Foreign Key)
+       [dbo].[FK_ScoreGroupName_ToScoreGroup] (Foreign Key)
+
+** Supporting actions

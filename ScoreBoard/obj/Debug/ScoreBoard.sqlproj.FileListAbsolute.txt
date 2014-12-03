@@ -1,0 +1,15 @@
+c:\users\zerophase\documents\visual studio 2013\Projects\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.dacpac
+c:\users\zerophase\documents\visual studio 2013\Projects\ScoreBoard\ScoreBoard\obj\Debug\ScoreBoard.dll
+c:\users\zerophase\documents\visual studio 2013\Projects\ScoreBoard\ScoreBoard\obj\Debug\ScoreBoard.pdb
+c:\users\zerophase\documents\visual studio 2013\Projects\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.dll
+c:\users\zerophase\documents\visual studio 2013\Projects\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.pdb
+C:\Users\michael.lojkovic\Desktop\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.dacpac
+C:\Users\michael.lojkovic\Desktop\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.dll
+C:\Users\michael.lojkovic\Desktop\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.pdb
+C:\Users\michael.lojkovic\Desktop\ScoreBoard\ScoreBoard\obj\Debug\ScoreBoard.dll
+C:\Users\michael.lojkovic\Desktop\ScoreBoard\ScoreBoard\obj\Debug\ScoreBoard.pdb
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.dacpac
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.dll
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.pdb
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\obj\Debug\ScoreBoard.dll
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\obj\Debug\ScoreBoard.pdb
