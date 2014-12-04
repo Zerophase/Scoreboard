@@ -19,7 +19,7 @@ namespace ScoreboardSite.Models
 		public string FirstMidName { get; set; }
 
 		[DataType(DataType.Date), Display(Name = "Hire Date")]
-		[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd", ApplyFormatInEditMode = true)]
+		[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
 		public DateTime HireDate { get; set; }
 
 		[Display(Name = "Full Name")]
