@@ -16,33 +16,45 @@ namespace ScoreboardSite.Controllers
     {
         private SchoolContext db = new SchoolContext();
 
-        // GET: Instructor
-        public ActionResult Index(int? id, int? courseID)
-        {
-            var viewModel = new InstructorIndexData();
-            viewModel.Instructors = db.Instructors
-                // Eager loading
-                .Include(i => i.OfficeAssignment)
-                // Eager loading
-                .Include(i => i.Courses.Select(c => c.Department))
-                .OrderBy(i => i.LastName);
+	    public ActionResult Index(int? id, int? courseID)
+	    {
+			var viewModel = new InstructorIndexData();
 
-            if(id != null)
-            {
-                ViewBag.InstructorID = id.Value;
-                viewModel.Courses = viewModel.Instructors.Where(
-                    i => i.ID == id.Value).Single().Courses;
-            }
+			viewModel.Instructors = db.Instructors
+				// Eager loading
+				.Include(i => i.OfficeAssignment)
+				// Eager loading
+				.Include(i => i.Courses.Select(c => c.Department))
+				.OrderBy(i => i.LastName);
 
-            if(courseID != null)
-            {
-                ViewBag.CourseID = courseID.Value;
-                viewModel.Enrollments = viewModel.Courses.Where(
-                    x => x.CourseID == courseID).Single().Enrollments;
-            }
+			if (id != null)
+			{
+				ViewBag.InstructorID = id.Value;
+				viewModel.Courses = viewModel.Instructors.Where(
+					i => i.ID == id.Value).Single().Courses;
+			}
 
-            return View(viewModel);
-        }
+		    if (courseID != null)
+		    {
+			    ViewBag.CourseID = courseID.Value;
+				//		// Lazy loading
+				//		ViewBag.CourseID = courseID.Value;
+				//		viewModel.Enrollments = viewModel.Courses.Where(
+				//			x => x.CourseID == courseID).Single().Enrollments;
+
+				// Explicit Loading
+			    var selectedCourse = viewModel.Courses.Where(x => x.CourseID == courseID).Single();
+				db.Entry(selectedCourse).Collection(x => x.Enrollments).Load();
+			    foreach (var enrollment in selectedCourse.Enrollments)
+			    {
+				    db.Entry(enrollment).Reference(x => x.Student).Load();
+			    }
+
+			    viewModel.Enrollments = selectedCourse.Enrollments;
+		    }
+
+		    return View(viewModel);
+	    }
 
         // GET: Instructor/Details/5
         public ActionResult Details(int? id)

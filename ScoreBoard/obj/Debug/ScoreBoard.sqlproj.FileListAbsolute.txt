@@ -11,5 +11,9 @@ C:\Users\michael.lojkovic\Desktop\ScoreBoard\ScoreBoard\obj\Debug\ScoreBoard.pdb
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.dacpac
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.dll
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\bin\Debug\ScoreBoard.pdb
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\obj\Debug\Model.xml
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\obj\Debug\refactor.xml
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\obj\Debug\postdeploy.sql
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\obj\Debug\predeploy.sql
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\obj\Debug\ScoreBoard.dll
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreBoard\obj\Debug\ScoreBoard.pdb
