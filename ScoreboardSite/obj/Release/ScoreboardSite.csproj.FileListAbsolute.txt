@@ -77,3 +77,7 @@ C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Release\ScoreboardSite.
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Release\ApplicationInsights.config
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Release\ScoreboardSite.dll
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Release\ScoreboardSite.pdb
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Release\ScoreboardSite.Migrations.MaxLengthOnNames.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Release\ScoreboardSite.Migrations.ColumnFirstName.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Release\ScoreboardSite.Migrations.ComplexDataModel.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Release\ScoreboardSite.Migrations.DepartmentStoredProcedure.resources

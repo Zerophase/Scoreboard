@@ -162,3 +162,5 @@ C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ApplicationInsigh
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.dll
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.pdb
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.csprojResolveAssemblyReference.cache
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.DepartmentStoredProcedure.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.RowVersion.resources
