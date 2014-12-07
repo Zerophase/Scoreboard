@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using ScoreboardSite.DAL;
 using ScoreboardSite.Models;
+using ScoreboardSite.Models.Scores;
 
 namespace ScoreboardSite.Migrations
 {
@@ -43,6 +45,312 @@ namespace ScoreboardSite.Migrations
 
             students.ForEach(s => context.Students.AddOrUpdate(p => p.LastName, s));
             context.SaveChanges();
+
+			var players = new List<Player>
+			{
+				new Player {AccountName = "RedViking"},
+				new Player {AccountName = "Grimlocke"},
+				new Player {AccountName = "Yilnis"},
+				new Player {AccountName = "Muler"},
+				new Player {AccountName = "DeadStrike"},
+				new Player {AccountName = "MasterBlaster"},
+				new Player {AccountName = "BlueBlaster"},
+				new Player {AccountName = "Xavier"},
+				new Player {AccountName = "FireBelow"},
+				new Player {AccountName = "ManicMonk"}
+			};
+
+			players.ForEach(p => context.Players.AddOrUpdate(A => A.AccountName, p));
+			context.SaveChanges();
+
+			var completionTimes = new List<CompletionTime>
+			{
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(5),
+					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+				},
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(10),
+					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+				},
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(23),
+					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+				
+				},
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(8),
+					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+				},
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(3),
+					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+				
+				},
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(7),
+					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+				
+				},
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(15),
+					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+				
+				},
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(12),
+					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+				},
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(9),
+					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+				},
+				new CompletionTime
+				{
+					TotalTimeToCompletion = TimeSpan.FromHours(20),
+					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+				}
+			};
+
+			completionTimes.ForEach(c => context.CompletionTimes.AddOrUpdate(a => a.TotalTimeToCompletion, c));
+			context.SaveChanges();
+
+			var deathCounts = new List<DeathCount>
+			{
+				new DeathCount
+				{
+					TotalDeaths = 10,
+					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+				},
+				new DeathCount
+				{
+					TotalDeaths = 1,
+					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+				},
+				new DeathCount
+				{
+					TotalDeaths = 3,
+					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+				},
+				new DeathCount
+				{
+					TotalDeaths = 5,
+					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+				},
+				new DeathCount
+				{
+					TotalDeaths = 4,
+					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+				},
+				new DeathCount
+				{
+					TotalDeaths = 20,
+					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+				},
+				new DeathCount
+				{
+					TotalDeaths = 0,
+					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+				},
+				new DeathCount
+				{
+					TotalDeaths = 11,
+					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+				},
+				new DeathCount
+				{
+					TotalDeaths = 6,
+					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+				},
+				new DeathCount
+				{
+					TotalDeaths = 30,
+					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+				}
+			};
+
+			deathCounts.ForEach(c => context.DeathCounts.AddOrUpdate(a => a.TotalDeaths, c));
+			context.SaveChanges();
+
+			var totalAchievements = new List<TotalAchievements>
+			{
+				new TotalAchievements
+				{
+					AchievementCount = 50,
+					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+				},
+				new TotalAchievements
+				{
+					AchievementCount = 25,
+					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+				},
+				new TotalAchievements
+				{
+					AchievementCount = 1,
+					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+				},
+				new TotalAchievements
+				{
+					AchievementCount = 15,
+					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+				},
+				new TotalAchievements
+				{
+					AchievementCount = 20,
+					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+				},
+				new TotalAchievements
+				{
+					AchievementCount = 30,
+					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+				},
+				new TotalAchievements
+				{
+					AchievementCount = 10,
+					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+				},
+				new TotalAchievements
+				{
+					AchievementCount = 65,
+					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+				},
+				new TotalAchievements
+				{
+					AchievementCount = 13,
+					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+				},
+				new TotalAchievements
+				{
+					AchievementCount = 7,
+					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+				}
+			};
+
+			totalAchievements.ForEach(c => context.TotalAchievements.AddOrUpdate(a => a.AchievementCount, c));
+			context.SaveChanges();
+
+			var overAllScores = new List<OverallScore>
+			{
+				new OverallScore
+				{
+					TotalScore = 75,
+					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+				},
+				new OverallScore
+				{
+					TotalScore = 30,
+					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+				},
+				new OverallScore
+				{
+					TotalScore = 15,
+					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+				},
+				new OverallScore
+				{
+					TotalScore = 10,
+					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+				},
+				new OverallScore
+				{
+					TotalScore = 12,
+					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+				},
+				new OverallScore
+				{
+					TotalScore = 45,
+					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+				},
+				new OverallScore
+				{
+					TotalScore = 19,
+					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+				},
+				new OverallScore
+				{
+					TotalScore = 50,
+					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+				},
+				new OverallScore
+				{
+					TotalScore = 2,
+					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+				},
+				new OverallScore
+				{
+					TotalScore = 1,
+					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+				}
+			};
+
+			overAllScores.ForEach(c => context.OverallScores.AddOrUpdate(a => a.TotalScore, c));
+			context.SaveChanges();
+
+			var monstersSlayens = new List<MonstersSlayen>
+			{
+				new MonstersSlayen
+				{
+					KillCount = 1000,
+					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+				},
+				new MonstersSlayen
+				{
+					KillCount = 800,
+					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+				},
+				new MonstersSlayen
+				{
+					KillCount = 700,
+					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+				},
+				new MonstersSlayen
+				{
+					KillCount = 500,
+					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+				},
+				new MonstersSlayen
+				{
+					KillCount = 200,
+					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+				},
+				new MonstersSlayen
+				{
+					KillCount = 100,
+					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+				},
+				new MonstersSlayen
+				{
+					KillCount = 150,
+					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+				},
+				new MonstersSlayen
+				{
+					KillCount = 400,
+					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+				},
+				new MonstersSlayen
+				{
+					KillCount = 900,
+					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+				},
+				new MonstersSlayen
+				{
+					KillCount = 300,
+					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+				}
+			};
+
+			monstersSlayens.ForEach(c => context.MonstersSlayens.AddOrUpdate(a => a.KillCount, c));
+			context.SaveChanges();
 
             var instructors = new List<Instructor>
             {

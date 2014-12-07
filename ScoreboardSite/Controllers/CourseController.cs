@@ -16,12 +16,33 @@ namespace ScoreboardSite.Controllers
     {
         private SchoolContext db = new SchoolContext();
 
+	    public ActionResult Index(int? SelectedDepartment)
+	    {
+		    var departments = db.Departments.OrderBy(q => q.Name).ToList();
+		    ViewBag.SelectedDepartment = new SelectList(departments, "DepartmentID", "Name", SelectedDepartment);
+		    int departmentID = SelectedDepartment.GetValueOrDefault();
+
+		    IQueryable<Course> courses =
+			    db.Courses.Where(c => !SelectedDepartment.HasValue || c.DepartmentID == departmentID)
+				    .OrderBy(d => d.CourseID)
+				    .Include(d => d.Department);
+		    // Use this to check the SQL generated
+			//var sql = courses.ToString();
+		    return View(courses.ToList());
+	    }
+
         // GET: Course
-        public ActionResult Index()
-        {
-            var courses = db.Courses.Include(c => c.Department);
-            return View(courses.ToList());
-        }
+		//public ActionResult Index()
+		//{
+		//	// Eager loading
+		//	//var courses = db.Courses.Include(c => c.Department);
+		//	//return View(courses.ToList());
+
+		//	// to see SQL queries set a break point here
+		//	var courses = db.Courses;
+		//	var sql = courses.ToString();
+		//	return View(courses.ToList());
+		//}
 
         // GET: Course/Details/5
         public ActionResult Details(int? id)
@@ -71,6 +92,21 @@ namespace ScoreboardSite.Controllers
 	        PopulateDepartmentsDropDownList(course.DepartmentID);
             return View(course);
         }
+
+	    public ActionResult UpdateCourseCredits()
+	    {
+		    return View();
+	    }
+
+	    [HttpPost]
+	    public ActionResult UpdateCourseCredits(int? multiplier)
+	    {
+		    if (multiplier != null)
+		    {
+			    ViewBag.RowsAffected = db.Database.ExecuteSqlCommand("UPDATE Course SET Credits = Credits * {0}", multiplier);
+		    }
+		    return View();
+	    }
 
         // GET: Course/Edit/5
         public ActionResult Edit(int? id)

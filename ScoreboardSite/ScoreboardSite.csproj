@@ -193,6 +193,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PlayerController.cs" />
+    <Compile Include="Controllers\ScoreControllers\CompletionTImeController.cs" />
+    <Compile Include="Controllers\ScoreControllers\DeathCountController.cs" />
+    <Compile Include="Controllers\ScoreControllers\MonstersSlayenController.cs" />
+    <Compile Include="Controllers\ScoreControllers\OverallScoreController.cs" />
+    <Compile Include="Controllers\ScoreControllers\TotalAchievementController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="DAL\SchoolConfiguration.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
@@ -228,6 +234,42 @@
     <Compile Include="Migrations\201412060724252_RowVersion.Designer.cs">
       <DependentUpon>201412060724252_RowVersion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412062211329_Inheritance.cs" />
+    <Compile Include="Migrations\201412062211329_Inheritance.Designer.cs">
+      <DependentUpon>201412062211329_Inheritance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412070151346_PlayerCreation.cs" />
+    <Compile Include="Migrations\201412070151346_PlayerCreation.Designer.cs">
+      <DependentUpon>201412070151346_PlayerCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412070229134_Scores.cs" />
+    <Compile Include="Migrations\201412070229134_Scores.Designer.cs">
+      <DependentUpon>201412070229134_Scores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412070320191_CompletionTimePopulated.cs" />
+    <Compile Include="Migrations\201412070320191_CompletionTimePopulated.Designer.cs">
+      <DependentUpon>201412070320191_CompletionTimePopulated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412070352087_CompletionTimeCorrection.cs" />
+    <Compile Include="Migrations\201412070352087_CompletionTimeCorrection.Designer.cs">
+      <DependentUpon>201412070352087_CompletionTimeCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412070422201_deathcountAdded.cs" />
+    <Compile Include="Migrations\201412070422201_deathcountAdded.Designer.cs">
+      <DependentUpon>201412070422201_deathcountAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412070425569_DeathCountFix.cs" />
+    <Compile Include="Migrations\201412070425569_DeathCountFix.Designer.cs">
+      <DependentUpon>201412070425569_DeathCountFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412070438274_ScoreColumnFix.cs" />
+    <Compile Include="Migrations\201412070438274_ScoreColumnFix.Designer.cs">
+      <DependentUpon>201412070438274_ScoreColumnFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412070443474_ScoreFixTwo.cs" />
+    <Compile Include="Migrations\201412070443474_ScoreFixTwo.Designer.cs">
+      <DependentUpon>201412070443474_ScoreFixTwo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
@@ -237,6 +279,14 @@
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OfficeAssignment.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Scores\CompletionTIme.cs" />
+    <Compile Include="Models\Scores\DeathCount.cs" />
+    <Compile Include="Models\Scores\MonstersSlayen.cs" />
+    <Compile Include="Models\Scores\OverallScore.cs" />
+    <Compile Include="Models\Scores\Score.cs" />
+    <Compile Include="Models\Scores\TotalAchievements.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -323,6 +373,37 @@
     <Content Include="Views\Department\Details.cshtml" />
     <Content Include="Views\Department\Edit.cshtml" />
     <Content Include="Views\Department\Index.cshtml" />
+    <Content Include="Views\Course\UpdateCourseCredits.cshtml" />
+    <Content Include="Views\Player\Create.cshtml" />
+    <Content Include="Views\Player\Delete.cshtml" />
+    <Content Include="Views\Player\Details.cshtml" />
+    <Content Include="Views\Player\Edit.cshtml" />
+    <Content Include="Views\Player\Index.cshtml" />
+    <Content Include="Views\TotalAchievement\Create.cshtml" />
+    <Content Include="Views\TotalAchievement\Delete.cshtml" />
+    <Content Include="Views\TotalAchievement\Details.cshtml" />
+    <Content Include="Views\TotalAchievement\Edit.cshtml" />
+    <Content Include="Views\TotalAchievement\Index.cshtml" />
+    <Content Include="Views\CompletionTIme\Create.cshtml" />
+    <Content Include="Views\CompletionTIme\Delete.cshtml" />
+    <Content Include="Views\CompletionTIme\Details.cshtml" />
+    <Content Include="Views\CompletionTIme\Edit.cshtml" />
+    <Content Include="Views\CompletionTIme\Index.cshtml" />
+    <Content Include="Views\DeathCount\Create.cshtml" />
+    <Content Include="Views\DeathCount\Delete.cshtml" />
+    <Content Include="Views\DeathCount\Details.cshtml" />
+    <Content Include="Views\DeathCount\Edit.cshtml" />
+    <Content Include="Views\DeathCount\Index.cshtml" />
+    <Content Include="Views\MonstersSlayen\Create.cshtml" />
+    <Content Include="Views\MonstersSlayen\Delete.cshtml" />
+    <Content Include="Views\MonstersSlayen\Details.cshtml" />
+    <Content Include="Views\MonstersSlayen\Edit.cshtml" />
+    <Content Include="Views\MonstersSlayen\Index.cshtml" />
+    <Content Include="Views\OverallScore\Create.cshtml" />
+    <Content Include="Views\OverallScore\Delete.cshtml" />
+    <Content Include="Views\OverallScore\Details.cshtml" />
+    <Content Include="Views\OverallScore\Edit.cshtml" />
+    <Content Include="Views\OverallScore\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -352,6 +433,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412060724252_RowVersion.resx">
       <DependentUpon>201412060724252_RowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412062211329_Inheritance.resx">
+      <DependentUpon>201412062211329_Inheritance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412070151346_PlayerCreation.resx">
+      <DependentUpon>201412070151346_PlayerCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412070229134_Scores.resx">
+      <DependentUpon>201412070229134_Scores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412070320191_CompletionTimePopulated.resx">
+      <DependentUpon>201412070320191_CompletionTimePopulated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412070352087_CompletionTimeCorrection.resx">
+      <DependentUpon>201412070352087_CompletionTimeCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412070422201_deathcountAdded.resx">
+      <DependentUpon>201412070422201_deathcountAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412070425569_DeathCountFix.resx">
+      <DependentUpon>201412070425569_DeathCountFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412070438274_ScoreColumnFix.resx">
+      <DependentUpon>201412070438274_ScoreColumnFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412070443474_ScoreFixTwo.resx">
+      <DependentUpon>201412070443474_ScoreFixTwo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

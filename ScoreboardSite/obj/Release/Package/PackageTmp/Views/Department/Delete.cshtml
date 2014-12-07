@@ -6,6 +6,8 @@
 
 <h2>Delete</h2>
 
+<p class="error">@ViewBag.ConcurrencyErrorMessage</p>
+
 <h3>Are you sure you want to delete this?</h3>
 <div>
     <h4>Department</h4>
@@ -14,13 +16,10 @@
         <dt>
             Administrator
         </dt>
-        @*<dt>
-            @Html.DisplayNameFor(model => model.Administrator.LastName)
-        </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Administrator.LastName)
-        </dd>*@
+            @Html.DisplayFor(model => model.Administrator.FullName)
+        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Name)
@@ -50,7 +49,9 @@
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
-
+        @Html.HiddenFor(model => model.DepartmentID)
+        @Html.HiddenFor(model => model.RowVersion)
+        
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")

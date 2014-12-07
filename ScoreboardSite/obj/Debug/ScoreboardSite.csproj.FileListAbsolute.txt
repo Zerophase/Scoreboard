@@ -164,3 +164,12 @@ C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.pd
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.csprojResolveAssemblyReference.cache
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.DepartmentStoredProcedure.resources
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.RowVersion.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.Inheritance.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.PlayerCreation.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.Scores.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.CompletionTimePopulated.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.CompletionTimeCorrection.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.deathcountAdded.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.DeathCountFix.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.ScoreColumnFix.resources
+C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.ScoreFixTwo.resources
