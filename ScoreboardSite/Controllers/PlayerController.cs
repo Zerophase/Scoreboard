@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ScoreboardSite.DAL;
+using ScoreboardSite.Migrations;
 using ScoreboardSite.Models;
+using ScoreboardSite.Models.Scores;
+using WebGrease.Css.Extensions;
 
 namespace ScoreboardSite.Controllers
 {
@@ -18,6 +22,8 @@ namespace ScoreboardSite.Controllers
         // GET: Player
         public ActionResult Index()
         {
+			//DbRawSqlQuery<Score> discriminators = db.Database.SqlQuery<Score>
+			//	();
             return View(db.Players.ToList());
         }
 

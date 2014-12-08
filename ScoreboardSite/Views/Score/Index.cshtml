@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ScoreboardSite.Models.Scores.Score>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Scores</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.DropDownList("DisCriminators", "Choose Category")
+        <input type="submit" value="Filter" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>Player</th>
+        <th>Score</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player.AccountName)
+            </td>
+            <td>
+                @{
+                    foreach (var score in item.Player.Scores)
+                    {
+                                @*@Html.Display(score.Player.AccountName) <br/>*@
+                    }
+                }
+            </td>
+       </tr>
+
+    }
+
+</table>
+

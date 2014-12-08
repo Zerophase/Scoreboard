@@ -9,7 +9,7 @@ namespace ScoreboardSite.Models.Scores
 	public class Score
 	{
 		public int ID { get; set; }
-		
-		public virtual Player Player { get; set; } 
+
+		public virtual Player Player { get; set; }
 	}
 }

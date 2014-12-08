@@ -41,9 +41,9 @@ namespace ScoreboardSite.DAL
 			// modelBuilder.Entity<Instructor>()
 			// .HasOptional(p => p.OfficeAssignment).WithRequired(p => p.Instructor);
 
-			//modelBuilder.Entity<Player>()
-			//	.HasMany(s => s.Scores)
-			//	.WithRequired(p => p.Player);
+			modelBuilder.Entity<Player>()
+				.HasMany(s => s.Scores)
+				.WithRequired(p => p.Player);
 
 			modelBuilder.Entity<Course>()
 				.HasMany(c => c.Instructors)

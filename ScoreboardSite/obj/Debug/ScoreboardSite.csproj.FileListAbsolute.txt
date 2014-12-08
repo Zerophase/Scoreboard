@@ -173,3 +173,12 @@ C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Mi
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.DeathCountFix.resources
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.ScoreColumnFix.resources
 C:\Users\Zerophase\Desktop\ScoreBoard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.ScoreFixTwo.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.ForeignKeyScores.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.AddCorrectPlayerIDToScore.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.GetAllKeysIn.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.TryAgainToGetEverythingIN.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.ANotherTry.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.DiscriminatorScore.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.DiscriminatorInDataModel.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.DiscriminatorAttempt.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.ScoreInScore.resources

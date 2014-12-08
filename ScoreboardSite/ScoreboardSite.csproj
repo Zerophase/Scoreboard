@@ -198,6 +198,7 @@
     <Compile Include="Controllers\ScoreControllers\DeathCountController.cs" />
     <Compile Include="Controllers\ScoreControllers\MonstersSlayenController.cs" />
     <Compile Include="Controllers\ScoreControllers\OverallScoreController.cs" />
+    <Compile Include="Controllers\ScoreControllers\ScoreController.cs" />
     <Compile Include="Controllers\ScoreControllers\TotalAchievementController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="DAL\SchoolConfiguration.cs" />
@@ -270,6 +271,42 @@
     <Compile Include="Migrations\201412070443474_ScoreFixTwo.Designer.cs">
       <DependentUpon>201412070443474_ScoreFixTwo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412071144567_ForeignKeyScores.cs" />
+    <Compile Include="Migrations\201412071144567_ForeignKeyScores.Designer.cs">
+      <DependentUpon>201412071144567_ForeignKeyScores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412071155534_AddCorrectPlayerIDToScore.cs" />
+    <Compile Include="Migrations\201412071155534_AddCorrectPlayerIDToScore.Designer.cs">
+      <DependentUpon>201412071155534_AddCorrectPlayerIDToScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412071205429_GetAllKeysIn.cs" />
+    <Compile Include="Migrations\201412071205429_GetAllKeysIn.Designer.cs">
+      <DependentUpon>201412071205429_GetAllKeysIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412071207174_TryAgainToGetEverythingIN.cs" />
+    <Compile Include="Migrations\201412071207174_TryAgainToGetEverythingIN.Designer.cs">
+      <DependentUpon>201412071207174_TryAgainToGetEverythingIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412071209021_ANotherTry.cs" />
+    <Compile Include="Migrations\201412071209021_ANotherTry.Designer.cs">
+      <DependentUpon>201412071209021_ANotherTry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412080417437_DiscriminatorScore.cs" />
+    <Compile Include="Migrations\201412080417437_DiscriminatorScore.Designer.cs">
+      <DependentUpon>201412080417437_DiscriminatorScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412080647507_DiscriminatorInDataModel.cs" />
+    <Compile Include="Migrations\201412080647507_DiscriminatorInDataModel.Designer.cs">
+      <DependentUpon>201412080647507_DiscriminatorInDataModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412080701483_DiscriminatorAttempt.cs" />
+    <Compile Include="Migrations\201412080701483_DiscriminatorAttempt.Designer.cs">
+      <DependentUpon>201412080701483_DiscriminatorAttempt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412080751097_ScoreInScore.cs" />
+    <Compile Include="Migrations\201412080751097_ScoreInScore.Designer.cs">
+      <DependentUpon>201412080751097_ScoreInScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
@@ -286,11 +323,13 @@
     <Compile Include="Models\Scores\MonstersSlayen.cs" />
     <Compile Include="Models\Scores\OverallScore.cs" />
     <Compile Include="Models\Scores\Score.cs" />
+    <Compile Include="Models\Scores\ScoreVM.cs" />
     <Compile Include="Models\Scores\TotalAchievements.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AssignedCourseData.cs" />
+    <Compile Include="ViewModels\AssignedScores.cs" />
     <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
     <Compile Include="ViewModels\InstructorIndexData.cs" />
   </ItemGroup>
@@ -404,6 +443,11 @@
     <Content Include="Views\OverallScore\Details.cshtml" />
     <Content Include="Views\OverallScore\Edit.cshtml" />
     <Content Include="Views\OverallScore\Index.cshtml" />
+    <Content Include="Views\Score\Create.cshtml" />
+    <Content Include="Views\Score\Delete.cshtml" />
+    <Content Include="Views\Score\Details.cshtml" />
+    <Content Include="Views\Score\Edit.cshtml" />
+    <Content Include="Views\Score\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -460,6 +504,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412070443474_ScoreFixTwo.resx">
       <DependentUpon>201412070443474_ScoreFixTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412071144567_ForeignKeyScores.resx">
+      <DependentUpon>201412071144567_ForeignKeyScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412071155534_AddCorrectPlayerIDToScore.resx">
+      <DependentUpon>201412071155534_AddCorrectPlayerIDToScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412071205429_GetAllKeysIn.resx">
+      <DependentUpon>201412071205429_GetAllKeysIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412071207174_TryAgainToGetEverythingIN.resx">
+      <DependentUpon>201412071207174_TryAgainToGetEverythingIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412071209021_ANotherTry.resx">
+      <DependentUpon>201412071209021_ANotherTry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412080417437_DiscriminatorScore.resx">
+      <DependentUpon>201412080417437_DiscriminatorScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412080647507_DiscriminatorInDataModel.resx">
+      <DependentUpon>201412080647507_DiscriminatorInDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412080701483_DiscriminatorAttempt.resx">
+      <DependentUpon>201412080701483_DiscriminatorAttempt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412080751097_ScoreInScore.resx">
+      <DependentUpon>201412080751097_ScoreInScore.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,33 +1,49 @@
-﻿@model IEnumerable<ScoreboardSite.Models.Player>
+﻿@using System.Web.UI.WebControls
+@model IEnumerable<ScoreboardSite.Models.Player>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Scores</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.DropDownList("DisCriminators", "Choose Category")
+        <input type="submit" value="Filter" />
+    </p>
+}
+
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AccountName)
-        </th>
-        <th></th>
-    </tr>
+        <th>Player</th>
+        <th>Score</th>
+    </tr> 
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccountName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PlayerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PlayerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PlayerID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountName)
+            </td>
+            <td>
+                @{
+                    foreach (var score in item.Scores)
+                    {
+                        @*@Html.Display(score.Player.AccountName) <br/>*@
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.PlayerID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.PlayerID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.PlayerID })
+            </td>
+        </tr>
+    }
 
 </table>

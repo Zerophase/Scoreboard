@@ -21,4 +21,8 @@ select PlayerFirst, playerlast, 2 as grp2 from(
 
 select * from friendRelations
 where PlayerFirst = @Fname) as h
-order by grp desc
+order by grp DESC
+
+SELECT DISTINCT
+	Discriminator
+FROM dbo.Score
