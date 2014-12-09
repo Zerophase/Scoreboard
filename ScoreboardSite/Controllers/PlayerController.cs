@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Core;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
@@ -11,6 +12,7 @@ using ScoreboardSite.DAL;
 using ScoreboardSite.Migrations;
 using ScoreboardSite.Models;
 using ScoreboardSite.Models.Scores;
+using ScoreboardSite.ViewModels;
 using WebGrease.Css.Extensions;
 
 namespace ScoreboardSite.Controllers
@@ -20,11 +22,74 @@ namespace ScoreboardSite.Controllers
         private SchoolContext db = new SchoolContext();
 
         // GET: Player
-        public ActionResult Index()
+		public ActionResult Index(string DisCriminators)
         {
-			//DbRawSqlQuery<Score> discriminators = db.Database.SqlQuery<Score>
-			//	();
-            return View(db.Players.ToList());
+			var discriminatorsReturned = db.Database.SqlQuery<ScoreVM>(
+				"SELECT DISTINCT Discriminator FROM dbo.Score");
+
+			
+											 
+
+			ViewBag.DisCriminators = new SelectList(discriminatorsReturned, "Discriminator", "Discriminator", DisCriminators);
+
+			string scoreColumn = "";
+			string scoreIdColumn = "";
+			string orderBy = "";
+			string ascend = "ASC";
+			string descend = "DESC";
+			switch (DisCriminators)
+			{
+				case "OverallScore":
+				{
+					scoreColumn = "OverallScore";
+					scoreIdColumn = "p.OverallScore_ID";
+					orderBy = descend;
+					break;
+				}
+				case "CompletionTime":
+				{
+					scoreColumn = "CompletionTime";
+					scoreIdColumn = "p.CompletionTime_ID";
+					orderBy = ascend;
+					break;
+				}
+				case "DeathCount":
+				{
+					scoreColumn = "DeathCount";
+					scoreIdColumn = "p.DeathCount_ID";
+					orderBy = ascend;
+					break;
+				}
+				case "MonstersSlayen":
+				{
+					scoreColumn = "MonstersSlayen";
+					scoreIdColumn = "p.MonstersSlayen_ID";
+					orderBy = descend;
+					break;
+				}
+				case "TotalAchievements":
+				{
+					scoreColumn = "TotalAchievements";
+					scoreIdColumn = "p.TotalAchievements_ID";
+					orderBy = descend;
+					break;
+				}
+			}
+			//var sortOrder = db.Database<Score>("SELECT")
+			var playerOrderQuery = "SELECT AccountName, " + scoreColumn + " FROM dbo.Player AS p " +
+				"INNER JOIN dbo.Score AS s ON s.Player_PlayerID = p.PlayerID " +
+				"WHERE " + scoreIdColumn + " = s.ID" + " ORDER BY " + scoreColumn + " " + orderBy;
+
+			IEnumerable<AssignedScores> data = db.Database.SqlQuery<AssignedScores>(playerOrderQuery);
+			if(!string.IsNullOrEmpty(DisCriminators))
+				return View(data.ToList());
+			else
+			{
+				var player = from p in db.Players
+					select p.AccountName;
+				IEnumerable<AssignedScores> players = db.Database.SqlQuery<AssignedScores>(player.ToString());
+				return View(players.ToList());
+			}
         }
 
         // GET: Player/Details/5

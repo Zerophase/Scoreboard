@@ -34,7 +34,7 @@ namespace ScoreboardSite.Controllers
 			               "WHERE Discriminator = 'Student' " +
 			               "GROUP BY EnrollmentDate";
 			IEnumerable<EnrollmentDateGroup> data = db.Database.SqlQuery<EnrollmentDateGroup>(query);
-
+			
 			return View(data.ToList());
 		}
 

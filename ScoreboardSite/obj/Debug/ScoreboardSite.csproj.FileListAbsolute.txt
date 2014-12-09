@@ -182,3 +182,7 @@ C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Mi
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.DiscriminatorInDataModel.resources
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.DiscriminatorAttempt.resources
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.ScoreInScore.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.AddedOverallScoreToPlayer.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.insertValues.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.AddAllDerivedScoresToPlayer.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.LinkingOverallScoreToPlayer.resources

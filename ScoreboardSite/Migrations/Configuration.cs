@@ -48,7 +48,7 @@ namespace ScoreboardSite.Migrations
 
 			var players = new List<Player>
 			{
-				new Player {AccountName = "RedViking"},
+				new Player {AccountName = "RedViking" },
 				new Player {AccountName = "Grimlocke"},
 				new Player {AccountName = "Yilnis"},
 				new Player {AccountName = "Muler"},

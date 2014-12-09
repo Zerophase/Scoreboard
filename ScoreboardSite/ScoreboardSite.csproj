@@ -307,6 +307,22 @@
     <Compile Include="Migrations\201412080751097_ScoreInScore.Designer.cs">
       <DependentUpon>201412080751097_ScoreInScore.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412090225295_AddedOverallScoreToPlayer.cs" />
+    <Compile Include="Migrations\201412090225295_AddedOverallScoreToPlayer.Designer.cs">
+      <DependentUpon>201412090225295_AddedOverallScoreToPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412090229425_insertValues.cs" />
+    <Compile Include="Migrations\201412090229425_insertValues.Designer.cs">
+      <DependentUpon>201412090229425_insertValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412090302523_AddAllDerivedScoresToPlayer.cs" />
+    <Compile Include="Migrations\201412090302523_AddAllDerivedScoresToPlayer.Designer.cs">
+      <DependentUpon>201412090302523_AddAllDerivedScoresToPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412090344576_LinkingOverallScoreToPlayer.cs" />
+    <Compile Include="Migrations\201412090344576_LinkingOverallScoreToPlayer.Designer.cs">
+      <DependentUpon>201412090344576_LinkingOverallScoreToPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
@@ -357,6 +373,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="SqlQueryTest\SQLQuery1.sql" />
+    <Content Include="SqlQueryTest\TestScript.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -531,6 +549,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412080751097_ScoreInScore.resx">
       <DependentUpon>201412080751097_ScoreInScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412090225295_AddedOverallScoreToPlayer.resx">
+      <DependentUpon>201412090225295_AddedOverallScoreToPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412090229425_insertValues.resx">
+      <DependentUpon>201412090229425_insertValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412090302523_AddAllDerivedScoresToPlayer.resx">
+      <DependentUpon>201412090302523_AddAllDerivedScoresToPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412090344576_LinkingOverallScoreToPlayer.resx">
+      <DependentUpon>201412090344576_LinkingOverallScoreToPlayer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

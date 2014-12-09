@@ -1,5 +1,7 @@
-﻿@using System.Web.UI.WebControls
-@model IEnumerable<ScoreboardSite.Models.Player>
+﻿@using System.Globalization
+@using System.Web.UI.WebControls
+@using ScoreboardSite.Models.Scores
+@model IEnumerable<ScoreboardSite.ViewModels.AssignedScores>
 
 @{
     ViewBag.Title = "Index";
@@ -30,18 +32,94 @@
             <td>
                 @Html.DisplayFor(modelItem => item.AccountName)
             </td>
+            @if (item.OverallScore != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.OverallScore)
+                </td>
+            }
+            @if (item.CompletionTime != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompletionTime)
+                </td>
+            }
+            @if (item.DeathCount != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeathCount)
+                </td>
+            }
+            @if (item.MonstersSlayen != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.MonstersSlayen)
+                </td>
+            }
+            @if (item.TotalAchievements != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalAchievements)
+                </td>
+            }
+
+            @*<td>
+                @Html.DisplayFor(modelItem => item.AccountName)
+            </td>*@
             <td>
+                
+                @*@Html.DisplayFor(modelItem => item.PlayerID)*@
                 @{
-                    foreach (var score in item.Scores)
+                    @*foreach (var score in item.Scores)
                     {
-                        @*@Html.Display(score.Player.AccountName) <br/>*@
-                    }
+                        string switchOn = ViewBag.DisCriminators.SelectedValue;
+                        switch (switchOn)
+                        {
+                            case "OverallScore":
+                            {
+                                if (score.GetType().Name.Contains("OverallScore"))
+                                {
+                                    @Html.DisplayFor(modelItem => ((OverallScore)score).TotalScore)
+
+                                }
+                                break;
+                            }
+                            case "CompletionTime":
+                            {
+                                if (score.GetType().Name.Contains("CompletionTime"))
+                                {
+                                    @Html.DisplayFor(modelItem => ((CompletionTime)score).TotalTimeToCompletion)
+                                }
+                                break;
+                            }
+                            case "DeathCount":
+                            {
+                                if (score.GetType().Name.Contains("DeathCount"))
+                                {
+                                    @Html.DisplayFor(modelItem => ((DeathCount)score).TotalDeaths)
+                                }
+                                break;
+                            }
+                            case "MonstersSlayen":
+                            {
+                                if (score.GetType().Name.Contains("MonstersSlayen"))
+                                {
+                                    @Html.DisplayFor(modelItem => ((MonstersSlayen)score).KillCount)
+                                }
+                                break;
+                            }
+                            case "TotalAchievements":
+                            {
+                                if (score.GetType().Name.Contains("TotalAchievements"))
+                                {
+                                    @Html.DisplayFor(modelItem => ((TotalAchievements)score).AchievementCount)
+                                }
+                                break;
+                            }
+                        }
+                    }*@
+
                 }
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.PlayerID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.PlayerID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.PlayerID })
             </td>
         </tr>
     }
