@@ -188,3 +188,5 @@ C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Mi
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.LinkingOverallScoreToPlayer.resources
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.RegionSelection.resources
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.RidSchoolData.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.ScoresToAzure.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.FixRegionOnAzure.resources

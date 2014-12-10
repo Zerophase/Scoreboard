@@ -1,0 +1,68 @@
+﻿@using System.Globalization
+@using System.Web.UI.WebControls
+@using ScoreboardSite.Models.Scores
+@model IEnumerable<ScoreboardSite.ViewModels.AssignedScores>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Scores</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.DropDownList("DisCriminators", "Choose Category")
+        @Html.DropDownList("RegionDiscriminator", "All Regions")
+        <input type="submit" value="Filter" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>Player</th>
+        <th>Region</th>
+        <th>Score</th>
+    </tr> 
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegionName)
+            </td>
+            @if (item.OverallScore != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.OverallScore)
+                </td>
+            }
+            @if (item.CompletionTime != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompletionTime)
+                </td>
+            }
+            @if (item.DeathCount != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeathCount)
+                </td>
+            }
+            @if (item.MonstersSlayen != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.MonstersSlayen)
+                </td>
+            }
+            @if (item.TotalAchievements != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalAchievements)
+                </td>
+            }
+        </tr>
+    }
+</table>

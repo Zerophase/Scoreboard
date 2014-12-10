@@ -328,6 +328,14 @@
     <Compile Include="Migrations\201412100826403_RidSchoolData.Designer.cs">
       <DependentUpon>201412100826403_RidSchoolData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412100904148_ScoresToAzure.cs" />
+    <Compile Include="Migrations\201412100904148_ScoresToAzure.Designer.cs">
+      <DependentUpon>201412100904148_ScoresToAzure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412100933094_FixRegionOnAzure.cs" />
+    <Compile Include="Migrations\201412100933094_FixRegionOnAzure.Designer.cs">
+      <DependentUpon>201412100933094_FixRegionOnAzure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -406,27 +414,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Student\Create.cshtml" />
-    <Content Include="Views\Student\Delete.cshtml" />
-    <Content Include="Views\Student\Details.cshtml" />
-    <Content Include="Views\Student\Edit.cshtml" />
-    <Content Include="Views\Student\Index.cshtml" />
-    <Content Include="Views\Course\Create.cshtml" />
-    <Content Include="Views\Course\Delete.cshtml" />
-    <Content Include="Views\Course\Details.cshtml" />
-    <Content Include="Views\Course\Edit.cshtml" />
-    <Content Include="Views\Course\Index.cshtml" />
-    <Content Include="Views\Instructor\Create.cshtml" />
-    <Content Include="Views\Instructor\Delete.cshtml" />
-    <Content Include="Views\Instructor\Details.cshtml" />
-    <Content Include="Views\Instructor\Edit.cshtml" />
-    <Content Include="Views\Instructor\Index.cshtml" />
-    <Content Include="Views\Department\Create.cshtml" />
-    <Content Include="Views\Department\Delete.cshtml" />
-    <Content Include="Views\Department\Details.cshtml" />
-    <Content Include="Views\Department\Edit.cshtml" />
-    <Content Include="Views\Department\Index.cshtml" />
-    <Content Include="Views\Course\UpdateCourseCredits.cshtml" />
     <Content Include="Views\Player\Create.cshtml" />
     <Content Include="Views\Player\Delete.cshtml" />
     <Content Include="Views\Player\Details.cshtml" />
@@ -568,6 +555,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412100826403_RidSchoolData.resx">
       <DependentUpon>201412100826403_RidSchoolData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412100904148_ScoresToAzure.resx">
+      <DependentUpon>201412100904148_ScoresToAzure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412100933094_FixRegionOnAzure.resx">
+      <DependentUpon>201412100933094_FixRegionOnAzure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

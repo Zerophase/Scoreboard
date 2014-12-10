@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="SchoolContext-Web.config Connection String" description="SchoolContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0; AttachDBFilename=|DataDirectory|\ScoreboardSite2.mdf Initial Catalog=ScoreboardSite2;Integrated Security=SSPI" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Zerophase\\Desktop\\ScoreBoard\\ScoreboardSite\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SchoolContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Zerophase\\Desktop\\Scoreboard\\ScoreboardSite\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SchoolContext']/@connectionString" />
   </parameter>
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="DefaultConnection_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Zerophase\\Desktop\\ScoreBoard\\ScoreboardSite\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="SchoolContext_DatabasePublish-Web.config Connection String" description="SchoolContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="SchoolContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Zerophase\\Desktop\\ScoreBoard\\ScoreboardSite\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SchoolContext_DatabasePublish']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Zerophase\\Desktop\\Scoreboard\\ScoreboardSite\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>
