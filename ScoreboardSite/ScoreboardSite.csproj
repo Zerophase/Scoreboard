@@ -188,10 +188,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CourseController.cs" />
-    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\RegionController.cs" />
@@ -201,7 +198,6 @@
     <Compile Include="Controllers\ScoreControllers\OverallScoreController.cs" />
     <Compile Include="Controllers\ScoreControllers\ScoreController.cs" />
     <Compile Include="Controllers\ScoreControllers\TotalAchievementController.cs" />
-    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="DAL\SchoolConfiguration.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
     <Compile Include="DAL\SchoolInitializer.cs" />
@@ -328,16 +324,14 @@
     <Compile Include="Migrations\201412100401253_RegionSelection.Designer.cs">
       <DependentUpon>201412100401253_RegionSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412100826403_RidSchoolData.cs" />
+    <Compile Include="Migrations\201412100826403_RidSchoolData.Designer.cs">
+      <DependentUpon>201412100826403_RidSchoolData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\Department.cs" />
-    <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\OfficeAssignment.cs" />
-    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Region.cs" />
     <Compile Include="Models\Scores\CompletionTIme.cs" />
@@ -347,13 +341,9 @@
     <Compile Include="Models\Scores\Score.cs" />
     <Compile Include="Models\Scores\ScoreVM.cs" />
     <Compile Include="Models\Scores\TotalAchievements.cs" />
-    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\AssignedCourseData.cs" />
     <Compile Include="ViewModels\AssignedScores.cs" />
-    <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
-    <Compile Include="ViewModels\InstructorIndexData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -575,6 +565,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412100401253_RegionSelection.resx">
       <DependentUpon>201412100401253_RegionSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412100826403_RidSchoolData.resx">
+      <DependentUpon>201412100826403_RidSchoolData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
