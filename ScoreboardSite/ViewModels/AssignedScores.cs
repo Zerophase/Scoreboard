@@ -15,5 +15,7 @@ namespace ScoreboardSite.ViewModels
 		public int? DeathCount { get; set; }
 		public int? MonstersSlayen { get; set; }
 		public int? TotalAchievements { get; set; }
+
+		public string RegionName { get; set; }
 	}
 }

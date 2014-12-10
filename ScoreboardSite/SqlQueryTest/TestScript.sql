@@ -31,3 +31,4 @@ WHEN MATCHED
 -- how to delete null values when wrong score assigned
 DELETE FROM Player
 WHERE AccountName IS NULL
+

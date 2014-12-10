@@ -25,6 +25,8 @@ namespace ScoreboardSite.DAL
 		public DbSet<MonstersSlayen> MonstersSlayens { get; set; }
 		public DbSet<OverallScore> OverallScores { get; set; }
 
+		public DbSet<Region> Regions { get; set; }
+
 		public DbSet<Person> People { get; set; } 
 		public DbSet<Student> Students { get; set; }
 		public DbSet<Enrollment> Enrollments { get; set; }

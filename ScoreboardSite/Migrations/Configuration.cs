@@ -22,30 +22,6 @@ namespace ScoreboardSite.Migrations
         {
             //  This method will be called after migrating to the latest version.
 
-            var students = new List<Student>
-            {
-                new Student { FirstMidName = "Carson",   LastName = "Alexander", 
-                    EnrollmentDate = DateTime.Parse("2010-09-01") },
-                new Student { FirstMidName = "Meredith", LastName = "Alonso",    
-                    EnrollmentDate = DateTime.Parse("2012-09-01") },
-                new Student { FirstMidName = "Arturo",   LastName = "Anand",     
-                    EnrollmentDate = DateTime.Parse("2013-09-01") },
-                new Student { FirstMidName = "Gytis",    LastName = "Barzdukas", 
-                    EnrollmentDate = DateTime.Parse("2012-09-01") },
-                new Student { FirstMidName = "Yan",      LastName = "Li",        
-                    EnrollmentDate = DateTime.Parse("2012-09-01") },
-                new Student { FirstMidName = "Peggy",    LastName = "Justice",   
-                    EnrollmentDate = DateTime.Parse("2011-09-01") },
-                new Student { FirstMidName = "Laura",    LastName = "Norman",    
-                    EnrollmentDate = DateTime.Parse("2013-09-01") },
-                new Student { FirstMidName = "Nino",     LastName = "Olivetto",  
-                    EnrollmentDate = DateTime.Parse("2005-09-01") }
-            };
-
-
-            students.ForEach(s => context.Students.AddOrUpdate(p => p.LastName, s));
-            context.SaveChanges();
-
 			var players = new List<Player>
 			{
 				new Player {AccountName = "RedViking" },
@@ -67,57 +43,47 @@ namespace ScoreboardSite.Migrations
 			{
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(5),
-					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(5)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(10),
-					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(10)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(23),
-					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(23)
 				
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(8),
-					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(8)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(3),
-					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(3)
 				
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(7),
-					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(7)
 				
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(15),
-					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(15)
 				
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(12),
-					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(12)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(9),
-					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(9)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(20),
-					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+					TotalTimeToCompletion = TimeSpan.FromHours(20)
 				}
 			};
 
@@ -128,53 +94,43 @@ namespace ScoreboardSite.Migrations
 			{
 				new DeathCount
 				{
-					TotalDeaths = 10,
-					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+					TotalDeaths = 10
 				},
 				new DeathCount
 				{
-					TotalDeaths = 1,
-					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+					TotalDeaths = 1
 				},
 				new DeathCount
 				{
-					TotalDeaths = 3,
-					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+					TotalDeaths = 3
 				},
 				new DeathCount
 				{
-					TotalDeaths = 5,
-					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+					TotalDeaths = 5
 				},
 				new DeathCount
 				{
-					TotalDeaths = 4,
-					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+					TotalDeaths = 4
 				},
 				new DeathCount
 				{
-					TotalDeaths = 20,
-					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+					TotalDeaths = 20
 				},
 				new DeathCount
 				{
-					TotalDeaths = 0,
-					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+					TotalDeaths = 0
 				},
 				new DeathCount
 				{
-					TotalDeaths = 11,
-					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+					TotalDeaths = 11
 				},
 				new DeathCount
 				{
-					TotalDeaths = 6,
-					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+					TotalDeaths = 6
 				},
 				new DeathCount
 				{
-					TotalDeaths = 30,
-					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+					TotalDeaths = 30
 				}
 			};
 
@@ -185,53 +141,43 @@ namespace ScoreboardSite.Migrations
 			{
 				new TotalAchievements
 				{
-					AchievementCount = 50,
-					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+					AchievementCount = 50
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 25,
-					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+					AchievementCount = 25
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 1,
-					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+					AchievementCount = 1
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 15,
-					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+					AchievementCount = 15
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 20,
-					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+					AchievementCount = 20
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 30,
-					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+					AchievementCount = 30
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 10,
-					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+					AchievementCount = 10
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 65,
-					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+					AchievementCount = 65
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 13,
-					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+					AchievementCount = 13
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 7,
-					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+					AchievementCount = 7
 				}
 			};
 
@@ -242,53 +188,43 @@ namespace ScoreboardSite.Migrations
 			{
 				new OverallScore
 				{
-					TotalScore = 75,
-					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+					TotalScore = 75
 				},
 				new OverallScore
 				{
-					TotalScore = 30,
-					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+					TotalScore = 30
 				},
 				new OverallScore
 				{
-					TotalScore = 15,
-					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+					TotalScore = 15
 				},
 				new OverallScore
 				{
-					TotalScore = 10,
-					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+					TotalScore = 10
 				},
 				new OverallScore
 				{
-					TotalScore = 12,
-					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+					TotalScore = 12
 				},
 				new OverallScore
 				{
-					TotalScore = 45,
-					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+					TotalScore = 45
 				},
 				new OverallScore
 				{
-					TotalScore = 19,
-					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+					TotalScore = 19
 				},
 				new OverallScore
 				{
-					TotalScore = 50,
-					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+					TotalScore = 50
 				},
 				new OverallScore
 				{
-					TotalScore = 2,
-					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+					TotalScore = 2
 				},
 				new OverallScore
 				{
-					TotalScore = 1,
-					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+					TotalScore = 1
 				}
 			};
 
@@ -299,233 +235,48 @@ namespace ScoreboardSite.Migrations
 			{
 				new MonstersSlayen
 				{
-					KillCount = 1000,
-					//PlayerID = players.Find(i => i.AccountName == "RedViking").PlayerID
+					KillCount = 1000
 				},
 				new MonstersSlayen
 				{
-					KillCount = 800,
-					//PlayerID = players.Find(i => i.AccountName == "Grimlocke").PlayerID
+					KillCount = 800
 				},
 				new MonstersSlayen
 				{
-					KillCount = 700,
-					//PlayerID = players.Find(i => i.AccountName == "Yilnis").PlayerID
+					KillCount = 700
 				},
 				new MonstersSlayen
 				{
-					KillCount = 500,
-					//PlayerID = players.Find(i => i.AccountName == "Muler").PlayerID
+					KillCount = 500
 				},
 				new MonstersSlayen
 				{
-					KillCount = 200,
-					//PlayerID = players.Find(i => i.AccountName == "DeadStrike").PlayerID
+					KillCount = 200
 				},
 				new MonstersSlayen
 				{
-					KillCount = 100,
-					//PlayerID = players.Find(i => i.AccountName == "MasterBlaster").PlayerID
+					KillCount = 100
 				},
 				new MonstersSlayen
 				{
-					KillCount = 150,
-					//PlayerID = players.Find(i => i.AccountName == "BlueBlaster").PlayerID
+					KillCount = 150
 				},
 				new MonstersSlayen
 				{
-					KillCount = 400,
-					//PlayerID = players.Find(i => i.AccountName == "Xavier").PlayerID
+					KillCount = 400
 				},
 				new MonstersSlayen
 				{
-					KillCount = 900,
-					//PlayerID = players.Find(i => i.AccountName == "FireBelow").PlayerID
+					KillCount = 900
 				},
 				new MonstersSlayen
 				{
-					KillCount = 300,
-					//PlayerID = players.Find(i => i.AccountName == "ManicMonk").PlayerID
+					KillCount = 300
 				}
 			};
 
 			monstersSlayens.ForEach(c => context.MonstersSlayens.AddOrUpdate(a => a.KillCount, c));
 			context.SaveChanges();
-
-            var instructors = new List<Instructor>
-            {
-                new Instructor { FirstMidName = "Kim",     LastName = "Abercrombie", 
-                    HireDate = DateTime.Parse("1995-03-11") },
-                new Instructor { FirstMidName = "Fadi",    LastName = "Fakhouri",    
-                    HireDate = DateTime.Parse("2002-07-06") },
-                new Instructor { FirstMidName = "Roger",   LastName = "Harui",       
-                    HireDate = DateTime.Parse("1998-07-01") },
-                new Instructor { FirstMidName = "Candace", LastName = "Kapoor",      
-                    HireDate = DateTime.Parse("2001-01-15") },
-                new Instructor { FirstMidName = "Roger",   LastName = "Zheng",      
-                    HireDate = DateTime.Parse("2004-02-12") }
-            };
-            instructors.ForEach(s => context.Instructors.AddOrUpdate(p => p.LastName, s));
-            context.SaveChanges();
-
-            var departments = new List<Department>
-            {
-                new Department { Name = "English",     Budget = 350000, 
-                    StartDate = DateTime.Parse("2007-09-01"), 
-                    InstructorID  = instructors.Single( i => i.LastName == "Abercrombie").ID },
-                new Department { Name = "Mathematics", Budget = 100000, 
-                    StartDate = DateTime.Parse("2007-09-01"), 
-                    InstructorID  = instructors.Single( i => i.LastName == "Fakhouri").ID },
-                new Department { Name = "Engineering", Budget = 350000, 
-                    StartDate = DateTime.Parse("2007-09-01"), 
-                    InstructorID  = instructors.Single( i => i.LastName == "Harui").ID },
-                new Department { Name = "Economics",   Budget = 100000, 
-                    StartDate = DateTime.Parse("2007-09-01"), 
-                    InstructorID  = instructors.Single( i => i.LastName == "Kapoor").ID }
-            };
-            departments.ForEach(s => context.Departments.AddOrUpdate(p => p.Name, s));
-            context.SaveChanges();
-
-            var courses = new List<Course>
-            {
-                new Course {CourseID = 1050, Title = "Chemistry",      Credits = 3,
-                  DepartmentID = departments.Single( s => s.Name == "Engineering").DepartmentID,
-                  Instructors = new List<Instructor>() 
-                },
-                new Course {CourseID = 4022, Title = "Microeconomics", Credits = 3,
-                  DepartmentID = departments.Single( s => s.Name == "Economics").DepartmentID,
-                  Instructors = new List<Instructor>() 
-                },
-                new Course {CourseID = 4041, Title = "Macroeconomics", Credits = 3,
-                  DepartmentID = departments.Single( s => s.Name == "Economics").DepartmentID,
-                  Instructors = new List<Instructor>() 
-                },
-                new Course {CourseID = 1045, Title = "Calculus",       Credits = 4,
-                  DepartmentID = departments.Single( s => s.Name == "Mathematics").DepartmentID,
-                  Instructors = new List<Instructor>() 
-                },
-                new Course {CourseID = 3141, Title = "Trigonometry",   Credits = 4,
-                  DepartmentID = departments.Single( s => s.Name == "Mathematics").DepartmentID,
-                  Instructors = new List<Instructor>() 
-                },
-                new Course {CourseID = 2021, Title = "Composition",    Credits = 3,
-                  DepartmentID = departments.Single( s => s.Name == "English").DepartmentID,
-                  Instructors = new List<Instructor>() 
-                },
-                new Course {CourseID = 2042, Title = "Literature",     Credits = 4,
-                  DepartmentID = departments.Single( s => s.Name == "English").DepartmentID,
-                  Instructors = new List<Instructor>() 
-                },
-            };
-            courses.ForEach(s => context.Courses.AddOrUpdate(p => p.CourseID, s));
-            context.SaveChanges();
-
-            var officeAssignments = new List<OfficeAssignment>
-            {
-                new OfficeAssignment { 
-                    InstructorID = instructors.Single( i => i.LastName == "Fakhouri").ID, 
-                    Location = "Smith 17" },
-                new OfficeAssignment { 
-                    InstructorID = instructors.Single( i => i.LastName == "Harui").ID, 
-                    Location = "Gowan 27" },
-                new OfficeAssignment { 
-                    InstructorID = instructors.Single( i => i.LastName == "Kapoor").ID, 
-                    Location = "Thompson 304" },
-            };
-            officeAssignments.ForEach(s => context.OfficeAssignments.AddOrUpdate(p => p.InstructorID, s));
-            context.SaveChanges();
-
-            AddOrUpdateInstructor(context, "Chemistry", "Kapoor");
-            AddOrUpdateInstructor(context, "Chemistry", "Harui");
-            AddOrUpdateInstructor(context, "Microeconomics", "Zheng");
-            AddOrUpdateInstructor(context, "Macroeconomics", "Zheng");
-
-            AddOrUpdateInstructor(context, "Calculus", "Fakhouri");
-            AddOrUpdateInstructor(context, "Trigonometry", "Harui");
-            AddOrUpdateInstructor(context, "Composition", "Abercrombie");
-            AddOrUpdateInstructor(context, "Literature", "Abercrombie");
-
-            context.SaveChanges();
-
-            var enrollments = new List<Enrollment>
-            {
-                new Enrollment { 
-                    StudentID = students.Single(s => s.LastName == "Alexander").ID, 
-                    CourseID = courses.Single(c => c.Title == "Chemistry" ).CourseID, 
-                    Grade = Grade.A 
-                },
-                 new Enrollment { 
-                    StudentID = students.Single(s => s.LastName == "Alexander").ID,
-                    CourseID = courses.Single(c => c.Title == "Microeconomics" ).CourseID, 
-                    Grade = Grade.C 
-                 },                            
-                 new Enrollment { 
-                    StudentID = students.Single(s => s.LastName == "Alexander").ID,
-                    CourseID = courses.Single(c => c.Title == "Macroeconomics" ).CourseID, 
-                    Grade = Grade.B
-                 },
-                 new Enrollment { 
-                     StudentID = students.Single(s => s.LastName == "Alonso").ID,
-                    CourseID = courses.Single(c => c.Title == "Calculus" ).CourseID, 
-                    Grade = Grade.B 
-                 },
-                 new Enrollment { 
-                     StudentID = students.Single(s => s.LastName == "Alonso").ID,
-                    CourseID = courses.Single(c => c.Title == "Trigonometry" ).CourseID, 
-                    Grade = Grade.B 
-                 },
-                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Alonso").ID,
-                    CourseID = courses.Single(c => c.Title == "Composition" ).CourseID, 
-                    Grade = Grade.B 
-                 },
-                 new Enrollment { 
-                    StudentID = students.Single(s => s.LastName == "Anand").ID,
-                    CourseID = courses.Single(c => c.Title == "Chemistry" ).CourseID
-                 },
-                 new Enrollment { 
-                    StudentID = students.Single(s => s.LastName == "Anand").ID,
-                    CourseID = courses.Single(c => c.Title == "Microeconomics").CourseID,
-                    Grade = Grade.B         
-                 },
-                new Enrollment { 
-                    StudentID = students.Single(s => s.LastName == "Barzdukas").ID,
-                    CourseID = courses.Single(c => c.Title == "Chemistry").CourseID,
-                    Grade = Grade.B         
-                 },
-                 new Enrollment { 
-                    StudentID = students.Single(s => s.LastName == "Li").ID,
-                    CourseID = courses.Single(c => c.Title == "Composition").CourseID,
-                    Grade = Grade.B         
-                 },
-                 new Enrollment { 
-                    StudentID = students.Single(s => s.LastName == "Justice").ID,
-                    CourseID = courses.Single(c => c.Title == "Literature").CourseID,
-                    Grade = Grade.B         
-                 }
-            };
-
-            foreach (Enrollment e in enrollments)
-            {
-                var enrollmentInDataBase = context.Enrollments.Where(
-                    s =>
-                         s.Student.ID == e.StudentID &&
-                         s.Course.CourseID == e.CourseID).SingleOrDefault();
-                if (enrollmentInDataBase == null)
-                {
-                    context.Enrollments.Add(e);
-                }
-            }
-            context.SaveChanges();
         }
-
-        void AddOrUpdateInstructor(SchoolContext context, string courseTitle, string instructorName)
-        {
-            var crs = context.Courses.SingleOrDefault(c => c.Title == courseTitle);
-            var inst = crs.Instructors.SingleOrDefault(i => i.LastName == instructorName);
-            if (inst == null)
-                crs.Instructors.Add(context.Instructors.Single(i => i.LastName == instructorName));
-        }
-        
     }
 }

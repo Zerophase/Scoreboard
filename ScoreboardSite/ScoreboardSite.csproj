@@ -194,6 +194,7 @@
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
+    <Compile Include="Controllers\RegionController.cs" />
     <Compile Include="Controllers\ScoreControllers\CompletionTImeController.cs" />
     <Compile Include="Controllers\ScoreControllers\DeathCountController.cs" />
     <Compile Include="Controllers\ScoreControllers\MonstersSlayenController.cs" />
@@ -323,6 +324,10 @@
     <Compile Include="Migrations\201412090344576_LinkingOverallScoreToPlayer.Designer.cs">
       <DependentUpon>201412090344576_LinkingOverallScoreToPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412100401253_RegionSelection.cs" />
+    <Compile Include="Migrations\201412100401253_RegionSelection.Designer.cs">
+      <DependentUpon>201412100401253_RegionSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
@@ -334,6 +339,7 @@
     <Compile Include="Models\OfficeAssignment.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Region.cs" />
     <Compile Include="Models\Scores\CompletionTIme.cs" />
     <Compile Include="Models\Scores\DeathCount.cs" />
     <Compile Include="Models\Scores\MonstersSlayen.cs" />
@@ -466,6 +472,11 @@
     <Content Include="Views\Score\Details.cshtml" />
     <Content Include="Views\Score\Edit.cshtml" />
     <Content Include="Views\Score\Index.cshtml" />
+    <Content Include="Views\Region\Create.cshtml" />
+    <Content Include="Views\Region\Delete.cshtml" />
+    <Content Include="Views\Region\Details.cshtml" />
+    <Content Include="Views\Region\Edit.cshtml" />
+    <Content Include="Views\Region\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -561,6 +572,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412090344576_LinkingOverallScoreToPlayer.resx">
       <DependentUpon>201412090344576_LinkingOverallScoreToPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412100401253_RegionSelection.resx">
+      <DependentUpon>201412100401253_RegionSelection.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

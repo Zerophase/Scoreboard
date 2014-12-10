@@ -23,5 +23,8 @@ namespace ScoreboardSite.Models
 		public virtual CompletionTime CompletionTime { get; set; }
 		public virtual MonstersSlayen MonstersSlayen { get; set; }
 		public virtual TotalAchievements TotalAchievements { get; set; }
+
+		[Required]
+		public virtual Region Region { get; set; }
 	}
 }

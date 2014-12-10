@@ -22,13 +22,10 @@ namespace ScoreboardSite.Controllers
         private SchoolContext db = new SchoolContext();
 
         // GET: Player
-		public ActionResult Index(string DisCriminators)
+		public ActionResult Index(string DisCriminators, string RegionDiscriminator)
         {
 			var discriminatorsReturned = db.Database.SqlQuery<ScoreVM>(
 				"SELECT DISTINCT Discriminator FROM dbo.Score");
-
-			
-											 
 
 			ViewBag.DisCriminators = new SelectList(discriminatorsReturned, "Discriminator", "Discriminator", DisCriminators);
 
@@ -75,20 +72,49 @@ namespace ScoreboardSite.Controllers
 					break;
 				}
 			}
-			//var sortOrder = db.Database<Score>("SELECT")
-			var playerOrderQuery = "SELECT AccountName, " + scoreColumn + " FROM dbo.Player AS p " +
-				"INNER JOIN dbo.Score AS s ON s.Player_PlayerID = p.PlayerID " +
-				"WHERE " + scoreIdColumn + " = s.ID" + " ORDER BY " + scoreColumn + " " + orderBy;
+
+			var regionDiscriminatorsReturned = db.Database.SqlQuery<Region>(
+				"SELECT RegionID, RegionName FROM dbo.Region");
+			ViewBag.RegionDiscriminator = new SelectList(regionDiscriminatorsReturned, "RegionName", "RegionName", RegionDiscriminator);
+
+			var playerOrderQuery = "SELECT AccountName, RegionName, " + scoreColumn + " FROM dbo.Player AS p " +
+			                       "INNER JOIN dbo.Score AS s ON s.Player_PlayerID = p.PlayerID " +
+			                       "INNER JOIN dbo.Region AS r ON p.Region_RegionID = r.RegionID " +
+			                       "WHERE " + scoreIdColumn + " = s.ID ";
+
+			if (!string.IsNullOrEmpty(RegionDiscriminator))
+			{
+				playerOrderQuery += "AND r.RegionName = " +
+				                    "'" + RegionDiscriminator + "'";
+			}
+
+			playerOrderQuery += " ORDER BY " + scoreColumn + " " + orderBy;
 
 			IEnumerable<AssignedScores> data = db.Database.SqlQuery<AssignedScores>(playerOrderQuery);
 			if(!string.IsNullOrEmpty(DisCriminators))
 				return View(data.ToList());
+			else if (!string.IsNullOrEmpty(RegionDiscriminator))
+			{
+				var player = from p in db.Players
+					join r in db.Regions on p.Region equals r
+					where (r.RegionName == RegionDiscriminator)
+					select new AssignedScores
+					{
+						AccountName = p.AccountName, 
+						RegionName = r.RegionName
+					};
+				return View(player.ToList());
+			}
 			else
 			{
 				var player = from p in db.Players
-					select p.AccountName;
-				IEnumerable<AssignedScores> players = db.Database.SqlQuery<AssignedScores>(player.ToString());
-				return View(players.ToList());
+							 join r in db.Regions on p.Region equals r
+							 select new AssignedScores
+							 {
+								 AccountName = p.AccountName, 
+								 RegionName = r.RegionName
+							 };
+				return View(player.ToList());
 			}
         }
 
