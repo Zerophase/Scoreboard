@@ -336,6 +336,10 @@
     <Compile Include="Migrations\201412100933094_FixRegionOnAzure.Designer.cs">
       <DependentUpon>201412100933094_FixRegionOnAzure.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412142356323_PasswordAddedToPlayer.cs" />
+    <Compile Include="Migrations\201412142356323_PasswordAddedToPlayer.Designer.cs">
+      <DependentUpon>201412142356323_PasswordAddedToPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -352,6 +356,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AssignedScores.cs" />
+    <Compile Include="ViewModels\Login.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -562,6 +567,15 @@
     <EmbeddedResource Include="Migrations\201412100933094_FixRegionOnAzure.resx">
       <DependentUpon>201412100933094_FixRegionOnAzure.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412142356323_PasswordAddedToPlayer.resx">
+      <DependentUpon>201412142356323_PasswordAddedToPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helpers\Helpers.csproj">
+      <Project>{cae73f4e-c82d-4b66-9d9a-198c3075dabb}</Project>
+      <Name>Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

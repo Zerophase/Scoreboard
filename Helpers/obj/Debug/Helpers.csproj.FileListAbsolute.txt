@@ -1,0 +1,5 @@
+C:\Users\Zerophase\Desktop\Scoreboard\Helpers\bin\Debug\Helpers.dll
+C:\Users\Zerophase\Desktop\Scoreboard\Helpers\bin\Debug\Helpers.pdb
+C:\Users\Zerophase\Desktop\Scoreboard\Helpers\obj\Debug\Helpers.csprojResolveAssemblyReference.cache
+C:\Users\Zerophase\Desktop\Scoreboard\Helpers\obj\Debug\Helpers.dll
+C:\Users\Zerophase\Desktop\Scoreboard\Helpers\obj\Debug\Helpers.pdb

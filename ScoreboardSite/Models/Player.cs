@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using ScoreboardSite.Models.Scores;
@@ -15,6 +17,11 @@ namespace ScoreboardSite.Models
 		[RegularExpression(@"^[a-zA-Z''-']*$")]
 		[StringLength(50, MinimumLength = 4), Display(Name = "Account Name")]
 		public string AccountName { get; set; }
+
+		[Required]
+		[RegularExpression(@"^[a-zA-Z''-']*$")]
+		[StringLength(50, MinimumLength = 4)]
+		public string Password { get; set; }
 
 		public virtual ICollection<Score> Scores { get; set; }
 

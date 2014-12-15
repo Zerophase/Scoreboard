@@ -31,6 +31,8 @@ namespace ScoreboardSite.DAL
 		{
 			modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
+			
+
 			modelBuilder.Entity<Player>()
 				.HasMany(s => s.Scores)
 				.WithRequired(p => p.Player);
