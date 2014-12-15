@@ -1,4 +1,5 @@
 ﻿@using System.Globalization
+@using System.Text.RegularExpressions
 @using System.Web.UI.WebControls
 @using ScoreboardSite.Models.Scores
 @model IEnumerable<ScoreboardSite.ViewModels.AssignedScores>
@@ -26,7 +27,12 @@
     </tr> 
 
     @foreach (var item in Model) {
-        <tr>
+        string selectedRow = "";
+        if (item.AccountName == ViewBag.LoggedInAccount)
+        {
+            selectedRow = "success";
+        }
+        <tr class="@selectedRow">
             <td>
                 @Html.DisplayFor(modelItem => item.AccountName)
             </td>

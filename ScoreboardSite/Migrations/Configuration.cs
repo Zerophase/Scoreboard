@@ -24,68 +24,66 @@ namespace ScoreboardSite.Migrations
 
 			var players = new List<Player>
 			{
-				new Player {AccountName = "RedViking", Password = "JimboJones", Region = new Region()},
-				new Player {AccountName = "Grimlocke", Password = "password", Region = new Region()},
-				new Player {AccountName = "Yilnis", Password = "Miskatonic", Region = new Region()},
-				new Player {AccountName = "Muler", Password = "JohnRambo", Region = new Region()},
-				new Player {AccountName = "DeadStrike", Password = "MikeFontano", Region = new Region()},
-				new Player {AccountName = "MasterBlaster", Password = "DanGilMore", Region = new Region()},
-				new Player {AccountName = "BlueBlaster", Password = "liveMore", Region = new Region()},
-				new Player {AccountName = "Xavier", Password = "Redday", Region = new Region()},
-				new Player {AccountName = "FireBelow", Password = "Nopes", Region = new Region()},
-				new Player {AccountName = "ManicMonk", Password = "haxor", Region = new Region()}
+				new Player {AccountName = "RedViking", Password = "JimboJones"},
+				new Player {AccountName = "Grimlocke", Password = "RedMan"},
+				new Player {AccountName = "Yilnis", Password = "MagicWay"},
+				new Player {AccountName = "Muler", Password = "WoopDeeDoo"},
+				new Player {AccountName = "DeadStrike", Password = "WhatWhat"},
+				new Player {AccountName = "MasterBlaster", Password = "RedTable"},
+				new Player {AccountName = "BlueBlaster", Password = "GoForth"},
+				new Player {AccountName = "Xavier", Password = "123456"},
+				new Player {AccountName = "FireBelow", Password = "abcdef"},
+				new Player {AccountName = "ManicMonk", Password = "maximumoverdrive"}
 			};
 
 			players.ForEach(p => context.Players.AddOrUpdate(A => A.AccountName, p));
-			players.ForEach(p => context.Players.AddOrUpdate(A => A.Password, p));
-			
 			context.SaveChanges();
 
 			var completionTimes = new List<CompletionTime>
 			{
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(5), Player = players[0]
+					TotalTimeToCompletion = TimeSpan.FromHours(5)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(10), Player = players[1]
+					TotalTimeToCompletion = TimeSpan.FromHours(10)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(23), Player = players[2]
+					TotalTimeToCompletion = TimeSpan.FromHours(23)
 				
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(8), Player = players[3]
+					TotalTimeToCompletion = TimeSpan.FromHours(8)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(3), Player = players[4]
+					TotalTimeToCompletion = TimeSpan.FromHours(3)
 				
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(7), Player = players[5]
+					TotalTimeToCompletion = TimeSpan.FromHours(7)
 				
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(15), Player = players[6]
+					TotalTimeToCompletion = TimeSpan.FromHours(15)
 				
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(12), Player = players[7]
+					TotalTimeToCompletion = TimeSpan.FromHours(12)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(9), Player = players[8]
+					TotalTimeToCompletion = TimeSpan.FromHours(9)
 				},
 				new CompletionTime
 				{
-					TotalTimeToCompletion = TimeSpan.FromHours(20), Player = players[9]
+					TotalTimeToCompletion = TimeSpan.FromHours(20)
 				}
 			};
 
@@ -96,43 +94,43 @@ namespace ScoreboardSite.Migrations
 			{
 				new DeathCount
 				{
-					TotalDeaths = 10, Player = players[0]
+					TotalDeaths = 10
 				},
 				new DeathCount
 				{
-					TotalDeaths = 1, Player = players[1]
+					TotalDeaths = 1
 				},
 				new DeathCount
 				{
-					TotalDeaths = 3, Player = players[2]
+					TotalDeaths = 3
 				},
 				new DeathCount
 				{
-					TotalDeaths = 5, Player = players[3]
+					TotalDeaths = 5
 				},
 				new DeathCount
 				{
-					TotalDeaths = 4, Player = players[4]
+					TotalDeaths = 4
 				},
 				new DeathCount
 				{
-					TotalDeaths = 20, Player = players[5]
+					TotalDeaths = 20
 				},
 				new DeathCount
 				{
-					TotalDeaths = 0, Player = players[6]
+					TotalDeaths = 0
 				},
 				new DeathCount
 				{
-					TotalDeaths = 11, Player = players[7]
+					TotalDeaths = 11
 				},
 				new DeathCount
 				{
-					TotalDeaths = 6, Player = players[8]
+					TotalDeaths = 6
 				},
 				new DeathCount
 				{
-					TotalDeaths = 30, Player = players[9]
+					TotalDeaths = 30
 				}
 			};
 
@@ -143,43 +141,43 @@ namespace ScoreboardSite.Migrations
 			{
 				new TotalAchievements
 				{
-					AchievementCount = 50, Player = players[0]
+					AchievementCount = 50
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 25, Player = players[1]
+					AchievementCount = 25
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 1, Player = players[2]
+					AchievementCount = 1
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 15, Player = players[3]
+					AchievementCount = 15
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 20, Player = players[4]
+					AchievementCount = 20
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 30, Player = players[5]
+					AchievementCount = 30
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 10, Player = players[6]
+					AchievementCount = 10
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 65, Player = players[7]
+					AchievementCount = 65
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 13, Player = players[8]
+					AchievementCount = 13
 				},
 				new TotalAchievements
 				{
-					AchievementCount = 7, Player = players[9]
+					AchievementCount = 7
 				}
 			};
 
@@ -190,43 +188,43 @@ namespace ScoreboardSite.Migrations
 			{
 				new OverallScore
 				{
-					TotalScore = 75, Player = players[0]
+					TotalScore = 75
 				},
 				new OverallScore
 				{
-					TotalScore = 30, Player = players[1]
+					TotalScore = 30
 				},
 				new OverallScore
 				{
-					TotalScore = 15, Player = players[2]
+					TotalScore = 15
 				},
 				new OverallScore
 				{
-					TotalScore = 10, Player = players[3]
+					TotalScore = 10
 				},
 				new OverallScore
 				{
-					TotalScore = 12, Player = players[4]
+					TotalScore = 12
 				},
 				new OverallScore
 				{
-					TotalScore = 45, Player = players[5]
+					TotalScore = 45
 				},
 				new OverallScore
 				{
-					TotalScore = 19, Player = players[6]
+					TotalScore = 19
 				},
 				new OverallScore
 				{
-					TotalScore = 50, Player = players[7]
+					TotalScore = 50
 				},
 				new OverallScore
 				{
-					TotalScore = 2, Player = players[8]
+					TotalScore = 2
 				},
 				new OverallScore
 				{
-					TotalScore = 1, Player = players[9]
+					TotalScore = 1
 				}
 			};
 
@@ -237,43 +235,43 @@ namespace ScoreboardSite.Migrations
 			{
 				new MonstersSlayen
 				{
-					KillCount = 1000, Player = players[0]
+					KillCount = 1000
 				},
 				new MonstersSlayen
 				{
-					KillCount = 800, Player = players[1]
+					KillCount = 800
 				},
 				new MonstersSlayen
 				{
-					KillCount = 700, Player = players[2]
+					KillCount = 700
 				},
 				new MonstersSlayen
 				{
-					KillCount = 500, Player = players[3]
+					KillCount = 500
 				},
 				new MonstersSlayen
 				{
-					KillCount = 200, Player = players[4]
+					KillCount = 200
 				},
 				new MonstersSlayen
 				{
-					KillCount = 100, Player = players[5]
+					KillCount = 100
 				},
 				new MonstersSlayen
 				{
-					KillCount = 150, Player = players[6]
+					KillCount = 150
 				},
 				new MonstersSlayen
 				{
-					KillCount = 400, Player = players[7]
+					KillCount = 400
 				},
 				new MonstersSlayen
 				{
-					KillCount = 900, Player = players[8]
+					KillCount = 900
 				},
 				new MonstersSlayen
 				{
-					KillCount = 300, Player = players[9]
+					KillCount = 300
 				}
 			};
 

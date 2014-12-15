@@ -5,9 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Security;
 using ScoreboardSite.DAL;
-using ScoreboardSite.Models;
 using ScoreboardSite.ViewModels;
 
 namespace ScoreboardSite.Controllers
@@ -18,11 +16,12 @@ namespace ScoreboardSite.Controllers
 		public ActionResult Index(string AccountName, string Password)
 		{
 			var errors = ModelState.Where(x => x.Value.Errors.Count > 0)
-				.Select(x => new {x.Key, x.Value.Errors}).ToArray();
+				.Select(x => new { x.Key, x.Value.Errors }).ToArray();
 			if (ModelState.IsValid)
 			{
 				if (IsValid(AccountName, Password))
 				{
+					Session["AccountName"] = AccountName;
 					return RedirectToAction("Index", "Player");
 				}
 			}

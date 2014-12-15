@@ -336,9 +336,9 @@
     <Compile Include="Migrations\201412100933094_FixRegionOnAzure.Designer.cs">
       <DependentUpon>201412100933094_FixRegionOnAzure.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201412142356323_PasswordAddedToPlayer.cs" />
-    <Compile Include="Migrations\201412142356323_PasswordAddedToPlayer.Designer.cs">
-      <DependentUpon>201412142356323_PasswordAddedToPlayer.cs</DependentUpon>
+    <Compile Include="Migrations\201412151206556_AddedPasswords.cs" />
+    <Compile Include="Migrations\201412151206556_AddedPasswords.Designer.cs">
+      <DependentUpon>201412151206556_AddedPasswords.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -382,6 +382,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="SqlQueryTest\SpaceBeforeCap.sql" />
     <Content Include="SqlQueryTest\SQLQuery1.sql" />
     <Content Include="SqlQueryTest\TestScript.sql" />
     <Content Include="Web.config" />
@@ -567,15 +568,9 @@
     <EmbeddedResource Include="Migrations\201412100933094_FixRegionOnAzure.resx">
       <DependentUpon>201412100933094_FixRegionOnAzure.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201412142356323_PasswordAddedToPlayer.resx">
-      <DependentUpon>201412142356323_PasswordAddedToPlayer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201412151206556_AddedPasswords.resx">
+      <DependentUpon>201412151206556_AddedPasswords.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Helpers\Helpers.csproj">
-      <Project>{cae73f4e-c82d-4b66-9d9a-198c3075dabb}</Project>
-      <Name>Helpers</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
