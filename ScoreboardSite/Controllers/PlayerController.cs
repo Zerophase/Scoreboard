@@ -6,6 +6,7 @@ using System.Data.Entity.Core;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using ScoreboardSite.DAL;
@@ -24,9 +25,14 @@ namespace ScoreboardSite.Controllers
         // GET: Player
 		public ActionResult Index(string DisCriminators, string RegionDiscriminator)
         {
+			if (Session["AccountName"] != null)
+			{
+				ViewBag.LoggedInAccount = (string)Session["AccountName"];
+			}
 			var discriminatorsReturned = db.Database.SqlQuery<ScoreVM>(
 				"SELECT DISTINCT Discriminator FROM dbo.Score");
 
+			// Cannot figure out how to add spaces to this
 			ViewBag.DisCriminators = new SelectList(discriminatorsReturned, "Discriminator", "Discriminator", DisCriminators);
 
 			string scoreColumn = "";

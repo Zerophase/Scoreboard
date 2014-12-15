@@ -24,16 +24,16 @@ namespace ScoreboardSite.Migrations
 
 			var players = new List<Player>
 			{
-				new Player {AccountName = "RedViking" },
-				new Player {AccountName = "Grimlocke"},
-				new Player {AccountName = "Yilnis"},
-				new Player {AccountName = "Muler"},
-				new Player {AccountName = "DeadStrike"},
-				new Player {AccountName = "MasterBlaster"},
-				new Player {AccountName = "BlueBlaster"},
-				new Player {AccountName = "Xavier"},
-				new Player {AccountName = "FireBelow"},
-				new Player {AccountName = "ManicMonk"}
+				new Player {AccountName = "RedViking", Password = "JimboJones"},
+				new Player {AccountName = "Grimlocke", Password = "RedMan"},
+				new Player {AccountName = "Yilnis", Password = "MagicWay"},
+				new Player {AccountName = "Muler", Password = "WoopDeeDoo"},
+				new Player {AccountName = "DeadStrike", Password = "WhatWhat"},
+				new Player {AccountName = "MasterBlaster", Password = "RedTable"},
+				new Player {AccountName = "BlueBlaster", Password = "GoForth"},
+				new Player {AccountName = "Xavier", Password = "123456"},
+				new Player {AccountName = "FireBelow", Password = "abcdef"},
+				new Player {AccountName = "ManicMonk", Password = "maximumoverdrive"}
 			};
 
 			players.ForEach(p => context.Players.AddOrUpdate(A => A.AccountName, p));

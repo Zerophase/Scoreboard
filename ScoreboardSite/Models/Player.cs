@@ -16,6 +16,11 @@ namespace ScoreboardSite.Models
 		[StringLength(50, MinimumLength = 4), Display(Name = "Account Name")]
 		public string AccountName { get; set; }
 
+		[Required]
+		[RegularExpression(@"^[a-zA-Z''-']*$")]
+		[StringLength(50, MinimumLength = 4)]
+		public string Password { get; set; }
+
 		public virtual ICollection<Score> Scores { get; set; }
 
 		public virtual OverallScore OverallScore { get; set; }
