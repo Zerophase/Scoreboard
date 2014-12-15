@@ -12,6 +12,5 @@ namespace ScoreboardSite.Models.Scores
 		[Display(Name = "Completion Time")]
 		[Column("CompletionTime")]
 		public TimeSpan TotalTimeToCompletion { get; set; }
-		
 	}
 }

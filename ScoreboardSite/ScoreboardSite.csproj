@@ -344,6 +344,10 @@
     <Compile Include="Migrations\201412151526264_FriendsTable.Designer.cs">
       <DependentUpon>201412151526264_FriendsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412152241430_AddedUnitsToScore.cs" />
+    <Compile Include="Migrations\201412152241430_AddedUnitsToScore.Designer.cs">
+      <DependentUpon>201412152241430_AddedUnitsToScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Friends.cs" />
@@ -581,6 +585,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412151526264_FriendsTable.resx">
       <DependentUpon>201412151526264_FriendsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412152241430_AddedUnitsToScore.resx">
+      <DependentUpon>201412152241430_AddedUnitsToScore.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

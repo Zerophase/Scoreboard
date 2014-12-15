@@ -11,5 +11,6 @@ namespace ScoreboardSite.Models.Scores
 	{
 		[Column("MonstersSlayen"), Display(Name = "Monsters Slayen")]
 		public int KillCount { get; set; }
+
 	}
 }

@@ -11,5 +11,6 @@ namespace ScoreboardSite.Models.Scores
 	{
 		[Column("OverallScore"), Display(Name = "Overall Score")]
 		public int TotalScore { get; set; }
+
 	}
 }

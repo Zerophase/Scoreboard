@@ -65,30 +65,35 @@
             {
                 <td>
                     @Html.DisplayFor(modelItem => item.OverallScore)
+                    @Html.Label(" Overall Score")
                 </td>
             }
             @if (item.CompletionTime != null)
             {
                 <td>
                     @Html.DisplayFor(modelItem => item.CompletionTime)
+                    @Html.Label(" Hours")
                 </td>
             }
             @if (item.DeathCount != null)
             {
                 <td>
                     @Html.DisplayFor(modelItem => item.DeathCount)
+                    @Html.Label(" Total Deaths")
                 </td>
             }
             @if (item.MonstersSlayen != null)
             {
                 <td>
                     @Html.DisplayFor(modelItem => item.MonstersSlayen)
+                    @Html.Label(" Monsters Killed")
                 </td>
             }
             @if (item.TotalAchievements != null)
             {
                 <td>
                     @Html.DisplayFor(modelItem => item.TotalAchievements)
+                    @Html.Label(" Achievements")
                 </td>
             }
         </tr>

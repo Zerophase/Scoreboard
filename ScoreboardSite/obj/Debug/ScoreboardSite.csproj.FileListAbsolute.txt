@@ -192,3 +192,4 @@ C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Mi
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.FixRegionOnAzure.resources
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.AddedPasswords.resources
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.FriendsTable.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Debug\ScoreboardSite.Migrations.AddedUnitsToScore.resources
