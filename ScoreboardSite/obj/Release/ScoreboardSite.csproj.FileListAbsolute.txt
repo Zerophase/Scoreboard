@@ -108,3 +108,5 @@ C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Release\ScoreboardSite.
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Release\ScoreboardSite.Migrations.RidSchoolData.resources
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Release\ScoreboardSite.Migrations.ScoresToAzure.resources
 C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Release\ScoreboardSite.Migrations.FixRegionOnAzure.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Release\ScoreboardSite.Migrations.AddedPasswords.resources
+C:\Users\Zerophase\Desktop\Scoreboard\ScoreboardSite\obj\Release\ScoreboardSite.Migrations.FriendsTable.resources

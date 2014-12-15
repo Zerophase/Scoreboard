@@ -26,16 +26,18 @@ namespace ScoreboardSite.DAL
 		public DbSet<OverallScore> OverallScores { get; set; }
 
 		public DbSet<Region> Regions { get; set; }
+		public DbSet<Friends> Friends { get; set; } 
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
 			modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-			
+
 
 			modelBuilder.Entity<Player>()
 				.HasMany(s => s.Scores)
 				.WithRequired(p => p.Player);
+
 		}
 	}
 }

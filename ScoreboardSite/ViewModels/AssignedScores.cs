@@ -9,6 +9,7 @@ namespace ScoreboardSite.ViewModels
 {
 	public class AssignedScores
 	{
+		public string FriendName { get; set; }
 		public string AccountName { get; set; }
 		public int? OverallScore { get; set; }
 		public TimeSpan? CompletionTime { get; set; }

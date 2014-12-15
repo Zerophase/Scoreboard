@@ -1,10 +1,36 @@
-﻿@{
+﻿@model ScoreboardSite.ViewModels.Login
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
     <h1>Score Board</h1>
 </div>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "login failed. Check your login details")
+    <div>
+        <fieldset>
+            <legend>Login</legend>
+            <div class="editor-label">
+                @Html.LabelFor(modelItem => modelItem.AccountName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(modelItem => modelItem.AccountName)
+                @Html.ValidationMessageFor(modelItem => modelItem.AccountName)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(modelItem => modelItem.Password)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(modelItem => modelItem.Password)
+                @Html.ValidationMessageFor(modelItem => modelItem.Password)
+            </div>
+            <input type="submit" value="Log In" />
+        </fieldset>
+    </div>
+}
 
 <div class="row">
     <li>

@@ -31,7 +31,7 @@ namespace ScoreboardSite.Controllers
 		private bool passwordFound;
 		public bool IsValid(string userName, string password)
 		{
-			using (var cn = new SqlConnection(@"Data Source=(LocalDb)\v11.0; AttachDBFilename=|DataDirectory|\ScoreboardSite2.mdf Initial Catalog=ScoreboardSite2;Integrated Security=SSPI"))
+			using (var cn = new SqlConnection(@"Server=tcp:jrp5adje8v.database.windows.net,1433;Database=SCOREBOARDSITE2_4429c315cb6f4b7c98c1acafb32c8569;User ID=mike@jrp5adje8v;Password=Exce68ll;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;"))
 			{
 				string sql = @"SELECT [AccountName] FROM [dbo].[Player] " +
 							 @"WHERE [AccountName] = @u AND [Password] = @p";

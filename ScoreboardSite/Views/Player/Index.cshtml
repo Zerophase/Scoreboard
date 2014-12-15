@@ -1,4 +1,5 @@
-﻿@using System.Globalization
+﻿@using System.Diagnostics.Eventing.Reader
+@using System.Globalization
 @using System.Text.RegularExpressions
 @using System.Web.UI.WebControls
 @using ScoreboardSite.Models.Scores
@@ -13,6 +14,11 @@
 @using (Html.BeginForm())
 {
     <p>
+        @if (ViewBag.LoggedInAccount != null)
+        {
+            @Html.CheckBox("Friends", "Friend")
+            @Html.Label(" Friends ")
+        }
         @Html.DropDownList("DisCriminators", "Choose Category")
         @Html.DropDownList("RegionDiscriminator", "All Regions")
         <input type="submit" value="Filter" />
@@ -23,18 +29,34 @@
     <tr>
         <th>Player</th>
         <th>Region</th>
-        <th>Score</th>
+        <th>
+            @if (!string.IsNullOrEmpty(ViewBag.CurrentScoreSelection))
+            {
+               @Html.Label("Score")
+            }
+            
+        </th>
     </tr> 
 
     @foreach (var item in Model) {
         string selectedRow = "";
-        if (item.AccountName == ViewBag.LoggedInAccount)
+        if (item.AccountName == ViewBag.LoggedInAccount ||
+            (!string.IsNullOrEmpty(item.FriendName) && 
+            item.FriendName == ViewBag.LoggedInAccount))
         {
             selectedRow = "success";
         }
         <tr class="@selectedRow">
             <td>
-                @Html.DisplayFor(modelItem => item.AccountName)
+                @if (ViewBag.Friends != null && ViewBag.Friends == true)
+                {
+                    @Html.DisplayFor(modelItem => item.FriendName)
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.AccountName)
+                }
+                
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.RegionName)

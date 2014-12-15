@@ -33,5 +33,7 @@ namespace ScoreboardSite.Models
 
 		[Required]
 		public virtual Region Region { get; set; }
+
+		public virtual ICollection<Friends> Friends { get; set; }
 	}
 }
